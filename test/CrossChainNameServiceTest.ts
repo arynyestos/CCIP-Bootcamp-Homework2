@@ -1,7 +1,6 @@
 import { expect } from "chai";
 import { ethers } from "hardhat";
 import { Signer } from "ethers";
-import { getRouterConfig } from "../tasks/utils";
 import { CCIPLocalSimulator } from "../typechain-types";
 
 describe("CCIP Cross Chain Name Service", function () {
