@@ -73,7 +73,7 @@ describe("CCIP Cross Chain Name Service", function () {
         await txResponse.wait();
         console.log("Register transaction completed:", txResponse.hash);
 
-        // Look up alice.ccns on CrossChainNameServiceLookup on both chains' and check the addresses match!
+        // Look up alice.ccns on CrossChainNameServiceLookup on both chains and check the addresses match!
         const resolvedAddressSource = await sourceCcnsLookup.lookup("alice.ccns");
         const resolvedAddressDestination = await destinationCcnsLookup.lookup("alice.ccns");
         expect(resolvedAddressSource).to.equal(await alice.getAddress());
